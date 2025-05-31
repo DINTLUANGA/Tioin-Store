@@ -1,4 +1,3 @@
-    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,53 +23,11 @@
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(255,255,255,0.2);
     }
-    .btn {
-      background: #1a73e8;
-      color: white;
-      border: none;
-      padding: 0.8rem 2rem;
-      font-size: 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Welcome to Tioin Store</h1>
-    <button class="btn" onclick="signInWithGoogle()">Continue with Google</button>
   </div>
-
-  <!-- Firebase -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
-    import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyA8UPQFZDB3x2bkJnvgDMvWCa10sxqIbTU",
-      authDomain: "login-6b60a.firebaseapp.com",
-      projectId: "login-6b60a",
-      storageBucket: "login-6b60a.appspot.com",
-      messagingSenderId: "271919089951",
-      appId: "1:271919089951:web:b4ee4edf2b3662c487882a",
-      measurementId: "G-397SEH3XY3"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const provider = new GoogleAuthProvider();
-
-    window.signInWithGoogle = () => {
-      signInWithPopup(auth, provider)
-        .then((result) => {
-          const user = result.user;
-          alert("Welcome " + user.displayName + "!");
-        })
-        .catch((error) => {
-          console.error(error);
-          alert("Login failed.");
-        });
-    };
-  </script>
 </body>
-</html>
+</html>￼Enter
